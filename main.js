@@ -2,17 +2,18 @@ let tiles = [];
 
 let main = {selected:'none', money:10, battery:100, power:0};
 
-let gui;
+//let gui;
 let buttons = [];
 
 function setup(){
 	createCanvas(800, 600);
 	frameRate(60);
 
-	gui = createGui();
-	gui.setTextSize(15);
+	//gui = createGui();
+	//gui.setTextSize(15);
 	
-	buttons.push(new GuiButton('Sell Power', 610, 35, 60, 20));
+	//buttons.push(new GuiButton('Sell Power', 610, 35, 60, 20));
+	buttons.push(new button('Sell Power', 610, 35, 60, 20));
 	
 	for (let i = 0; i < buttons.length; i++){
 		buttons[i].setStyle({textSize:10, rounding:5, fillBgActive:color('#FFFFFF')});
@@ -158,4 +159,11 @@ function buttonPressed(label){
 			break;
 	}
 	return;
+}
+
+function button(label, x, y, w, h, event) {
+	this.draw = function(){
+		text(label, x-w/2, y-h/2)
+		rect(x,y,w,h);
+	}
 }
