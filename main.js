@@ -8,7 +8,7 @@ let buttons = [];
 function setup(){
 	createCanvas(800, 600);
 	frameRate(60);
-	
+
 	gui = createGui();
 	
 	buttons.push(new GuiButton('Sell Power', 650, 40, 40, 20));
@@ -17,9 +17,9 @@ function setup(){
 function draw(){
 	background(80);
 	
-	if (tiles.length > 0){
+	if (tiles.length > 0){	
 		push();
-		//noStroke();
+		
 		for (let h = 0; h < tiles.length; h++){
 			for (let w = 0; w < tiles[h].length; w++){
 				switch (tiles[h][w].type){
