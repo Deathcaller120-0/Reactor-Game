@@ -12,7 +12,7 @@ function setup(){
 	gui = createGui();
 	gui.setTextSize(15);
 	
-	buttons.push(new GuiButton('Sell Power', 610, 30, 20, 60));
+	buttons.push(new GuiButton('Sell Power', 610, 30, 60, 20));
 }
 
 function draw(){
