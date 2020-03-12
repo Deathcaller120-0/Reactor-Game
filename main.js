@@ -13,7 +13,10 @@ function setup(){
 	gui.setTextSize(15);
 	
 	buttons.push(new GuiButton('Sell Power', 610, 35, 60, 20));
-	buttons[0].setStyle({textSize:15});
+	
+	for (let i = 0; i < buttons.length; i++){
+		buttons[i].setStyle({textSize:15});
+	}
 }
 
 function draw(){
