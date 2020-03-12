@@ -15,7 +15,7 @@ function setup(){
 	buttons.push(new GuiButton('Sell Power', 610, 35, 60, 20));
 	
 	for (let i = 0; i < buttons.length; i++){
-		buttons[i].setStyle({textSize:10, rounding:5});
+		buttons[i].setStyle({textSize:10, rounding:5, fillBgActive:p5.color(255,255,255)});
 	}
 }
 
@@ -101,11 +101,10 @@ function draw(){
 	
 	drawGui();
 	// On Screen Buttons
-	if (buttons.length > 0){
-		for (let i = 0; i < buttons.length; i++){
-			if (buttons[i].isPressed){
-				
-			}
+	for (let i = 0; i < buttons.length; i++){
+		buttons[i].draw();
+		if (buttons[i].isPressed){
+			buttonPressed(button.label);
 		}
 	}
 }
@@ -149,5 +148,11 @@ function placeStruct(h,w){
 	
 	if (structure.monCost <= main.money){
 		
+	}
+}
+
+function buttonPressed(label){
+	switch (label){
+		case 'Sell Power': 
 	}
 }
