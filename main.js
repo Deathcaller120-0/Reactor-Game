@@ -115,7 +115,7 @@ function mousePressed(){
 		for (let h = 0; h < tiles.length; h++){
 			for (let w = 0; w < tiles.length; w++){
 				let obj = tiles[h][w];
-				collide = collidePointRect(mouseX, mouseY, obj.x, obj.y, 20, 20);
+				collide = collidePointRect(mouseX, mouseY, obj.x, obj.y, 19, 19);
 				if (collide){
 					placeStruct(h,w);
 					break;
