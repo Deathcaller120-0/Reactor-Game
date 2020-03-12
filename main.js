@@ -153,6 +153,9 @@ function placeStruct(h,w){
 
 function buttonPressed(label){
 	switch (label){
-		case 'Sell Power': 
+		case 'Sell Power':
+			
+			break;
 	}
+	return;
 }
