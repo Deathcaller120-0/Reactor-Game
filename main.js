@@ -98,10 +98,14 @@ function draw(){
 	// Display Money
 	text('$'+main.money, 605,30);
 	
-	// Rendering of On Screen Buttons
+	
+	drawGui();
+	// On Screen Buttons
 	if (buttons.length > 0){
 		for (let i = 0; i < buttons.length; i++){
-			buttons[i].draw();
+			if (buttons[i].isPressed){
+				
+			}
 		}
 	}
 }
