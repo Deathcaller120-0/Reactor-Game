@@ -99,7 +99,7 @@ function draw(){
 	text('$'+main.money, 605,30);
 	
 	
-	drawGui();
+	//drawGui();
 	// On Screen Buttons
 	for (let i = 0; i < buttons.length; i++){
 		buttons[i].draw();
