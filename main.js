@@ -10,7 +10,7 @@ function setup(){
 	frameRate(60);
 
 	gui = createGui();
-	gui.setTextSize(10);
+	gui.setTextSize(12);
 	
 	buttons.push(new GuiButton('Sell Power', 650, 40, 40, 20));
 }
