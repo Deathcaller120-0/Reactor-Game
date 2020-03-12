@@ -103,9 +103,9 @@ function draw(){
 	// On Screen Buttons
 	for (let i = 0; i < buttons.length; i++){
 		buttons[i].draw();
-		if (buttons[i].isPressed){
-			buttonPressed(button.label);
-		}
+		//if (buttons[i].isPressed){
+		//	buttonPressed(button.label);
+		//}
 	}
 }
 
