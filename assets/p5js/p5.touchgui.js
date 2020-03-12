@@ -974,7 +974,7 @@ class GuiButton extends GuiObject {
         noStroke();
         textAlign(CENTER, CENTER);
         textFont(this._style.font);
-        let size = this.w/2;
+        let size = this.w;
         if (size > this._style.textSize) {
           size = this._style.textSize;
         }
@@ -1089,7 +1089,7 @@ class GuiToggle extends GuiObject {
         noStroke();
         textAlign(CENTER, CENTER);
         textFont(this._style.font);
-        let size = this.w*0.9;
+        let size = this.w;
         if (size > this._style.textSize) {
           size = this._style.textSize;
         }
