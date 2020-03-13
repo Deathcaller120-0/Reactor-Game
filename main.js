@@ -14,7 +14,7 @@ function setup(){
 	
 	//buttons.push(new GuiButton('Sell Power', 610, 35, 60, 20));
 	buttons.push(new button('Sell Power', 610, 35, 60, 20));
-	alert(JSON.stringify(buttons[0]));
+	//alert(JSON.stringify(buttons[0]));
 	
 	//for (let i = 0; i < buttons.length; i++){
 	//	buttons[i].setStyle({textSize:10, rounding:5, fillBgActive:color('#FFFFFF')});
@@ -167,8 +167,7 @@ function button (label = 'unnamed', x, y, w, h, event=undefined, style) {
 	let obj = {label:label, x:x, y:y, w:w, h:h, event:event, style:style}
 	obj.draw = function(){
 		push();
-		f
-		ill(this.style.textColor);
+		fill(this.style.textColor);
 		stroke(this.style.textColor);
 		textSize(this.style.textSize);
 		text(this.label, this.x+this.w/2, this.y+this.h/2);
@@ -178,6 +177,6 @@ function button (label = 'unnamed', x, y, w, h, event=undefined, style) {
 		rect(this.x,this.y,this.w,this.h);
 		pop();
 	}
-	alert(JSON.stringify(obj));
+	//alert(JSON.stringify(obj));
 	return obj;
 }
