@@ -9,7 +9,7 @@ function setup(){
 	createCanvas(800, 600);
 	frameRate(60);
 	
-	buttons.push(new button('Sell Power', 605, 35, 60, 20));
+	buttons.push(new button('Sell Power', 605, 35, 60, 20, {textXoff:3}));
 	//alert(JSON.stringify(buttons[0]));
 	
 	for (let i = 0; i < buttons.length; i++){
