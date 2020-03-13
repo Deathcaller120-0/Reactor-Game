@@ -8,16 +8,12 @@ let buttons = [];
 function setup(){
 	createCanvas(800, 600);
 	frameRate(60);
-
-	//gui = createGui();
-	//gui.setTextSize(15);
 	
-	//buttons.push(new GuiButton('Sell Power', 610, 35, 60, 20));
 	buttons.push(new button('Sell Power', 605, 35, 60, 20));
-	//alert(JSON.stringify(buttons[0]));
+	alert(JSON.stringify(buttons[0]));
 	
 	for (let i = 0; i < buttons.length; i++){
-		buttons[i].style.backgroundColor='#808080';
+		buttons[i].style.backgroundColor='#707070';
 		buttons[i].style.borderColor='#909090';
 	}
 }
@@ -116,7 +112,7 @@ function draw(){
 }
 
 function mousePressed(){
-	if (mouseX >= 0 && mouseX <= 600 && mouseY >= 0 && mouseY <= 600){
+	if (mouseX > 0 && mouseX < 600 && mouseY > 0 && mouseY < 600){
 		let collide = false;
 		for (let h = 0; h < tiles.length; h++){
 			for (let w = 0; w < tiles.length; w++){
@@ -131,7 +127,15 @@ function mousePressed(){
 	}
 	
 	if (mouseX >= 600 && mouseX <= 800 && mouseY >= 0 && mouseY <= 600){
-		
+		let collide = false;
+		for (let i = 0; i < buttons.length; i++){
+			let o = buttons[i];
+			collide = collidePointRect(mouseX, mouseY, o.x, o.y, o.w, o.h);
+			if (collide){
+				o.event();
+				break
+			}
+		}
 	}
 }
 
@@ -157,16 +161,7 @@ function placeStruct(h,w){
 	}
 }
 
-function buttonPressed(label){
-	switch (label){
-		case 'Sell Power':
-			
-			break;
-	}
-	return;
-}
-
-function button (label = 'unnamed', x, y, w, h, style, event=undefined) {
+function button (label = 'unnamed', x, y, w, h, style, event=function{}) {
 	if (style == undefined){
 		style = {textSize:10, textColor:'#000', backgroundColor:'#fff', borderColor:'#fff', textXoff:1, textYoff:h/2};
 	}
