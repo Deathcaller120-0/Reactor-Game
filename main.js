@@ -161,9 +161,11 @@ function buttonPressed(label){
 	return;
 }
 
-function button(label, x, y, w, h, event) {
-	this.draw = function(){
-		text(label, x-w/2, y-h/2)
-		rect(x,y,w,h);
+function button(label = 'unnamed', x=1, y=1, w=20, h=10, event=undefined) {
+	let obj = {label:label, x:x, y:y, w:w, h:h, event:event}
+	obj.draw = function(){
+		text(this.label, this.x-this.w/2, this.y-this.h/2)
+		rect(this.x,this.y,this.w,this.h);
 	}
+	return obj;
 }
