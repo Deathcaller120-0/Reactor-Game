@@ -63,7 +63,7 @@ function draw(){
 	} else {
 		push();
 		textSize(30);
-		text('Map not chosen', width/2,height/2);
+		text('Map not chosen', width/3,height/2);
 		pop();
 	}
 	
