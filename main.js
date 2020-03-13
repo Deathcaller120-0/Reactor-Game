@@ -210,8 +210,13 @@ function button (label = 'unnamed', x, y, w, h, style, event=undefined) {
 	let obj = {label:label, x:x, y:y, w:w, h:h, event:event, style:styleParsed}
 	obj.draw = function(){
 		push();
-		fill(this.style.backgroundColor);
-		stroke(this.style.borderColor);
+		if (collide(mouseX, mouseY, this.x,this.y,this.w,this.h)){
+			fill(this.style.hoverBgColor);
+			stroke(this.style.hoverBorderColor);
+		} else {
+			fill(this.style.backgroundColor);
+			stroke(this.style.borderColor);
+		}
 		rect(this.x,this.y,this.w,this.h);
 		
 		fill(this.style.textColor);
