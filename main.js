@@ -15,6 +15,7 @@ function setup(){
 	//buttons.push(new GuiButton('Sell Power', 610, 35, 60, 20));
 	buttons.push(new button('Sell Power', 610, 35, 60, 20));
 	alert(JSON.stringify(buttons[0]));
+	
 	//for (let i = 0; i < buttons.length; i++){
 	//	buttons[i].setStyle({textSize:10, rounding:5, fillBgActive:color('#FFFFFF')});
 	//}
