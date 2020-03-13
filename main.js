@@ -17,9 +17,8 @@ function setup(){
 	//alert(JSON.stringify(buttons[0]));
 	
 	for (let i = 0; i < buttons.length; i++){
-		buttons[i].style.textSize:10;
-		buttons[i].style.backgroundColor:'#808080';
-		buttons[i].style.borderColor:'#909090';
+		buttons[i].style.backgroundColor='#808080';
+		buttons[i].style.borderColor='#909090';
 	}
 }
 
