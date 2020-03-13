@@ -8,13 +8,15 @@ let sprites = [];
 
 function setup(){
 	sprites[1] = loadImage('assets/solarPanel.png');
+	sprites[2] = loadImage('assets/heatGene.png');
 	
 	createCanvas(800, 600);
 	frameRate(60);
 	
 	buttons.push(new button('Sell Power', 605, 35, 60, 20));
 	buttons.push(new button('Wind Turbine', 605, 60, 65, 20));
-	buttons.push(new button('Solar Panel', 605, 60, 65, 20));
+	buttons.push(new button('Solar Panel', 605, 90, 65, 20));
+	buttons.push(new button('Heat Generator', 605, 120, 65, 20));
 	//alert(JSON.stringify(buttons));
 	
 	for (let i = 0; i < buttons.length; i++){
