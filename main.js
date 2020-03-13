@@ -28,7 +28,10 @@ function setup(){
 function draw(){
 	background(80);
 	
-	image(sprites[1],50,50);
+	if (frameCount > sprites.length){
+		frameCount = 0;
+	}
+	image(sprites[frameCount],50,50);
 	
 	if (tiles.length > 0){	
 		push();
