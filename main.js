@@ -10,7 +10,7 @@ function setup(){
 	frameRate(60);
 	
 	buttons.push(new button('Sell Power', 605, 35, 60, 20));
-	alert(JSON.stringify(buttons[0]));
+	//alert(JSON.stringify(buttons[0]));
 	
 	for (let i = 0; i < buttons.length; i++){
 		buttons[i].style.backgroundColor='#707070';
