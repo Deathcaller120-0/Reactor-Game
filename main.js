@@ -107,6 +107,12 @@ function draw(){
 	for (let i = 0; i < buttons.length; i++){
 		buttons[i].draw();
 	}
+	
+	push();
+	line(mouseX, 0, mouseX, height);
+	line(0, mouseY, width, mouseY);
+	text(mouseX + ',' + mouseY, mouseX, mouseY);
+	pop();
 }
 
 function mousePressed(){
