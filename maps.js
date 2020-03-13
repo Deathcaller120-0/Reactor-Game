@@ -6,5 +6,6 @@ var maps = [
 
 var struct = [
   {id:'windTurbine', dur:60, powGen:1, heatCap:1, monCost:10, unlocked:true}, 
-  {id:'heatGene', powGen:2, heatCap:5, monCost:25, unlocked:false}
+  {id:'heatGene', powGen:2, heatCap:5, monCost:25, unlocked:false},
+  {id:'solarPanel', dur:10, monCost:15, unlocked:false}
 ];
