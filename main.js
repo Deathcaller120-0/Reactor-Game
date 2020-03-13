@@ -172,7 +172,27 @@ function button (label = 'unnamed', x, y, w, h, style, event=undefined) {
 		}
 	}
 	
-	let obj = {label:label, x:x, y:y, w:w, h:h, event:event, style:style}
+	let styleParsed = style;
+	if (style.textSize == undefined){
+		styleParsed.textSize = 10;
+	}
+	if (style.textColor == undefined){
+		styleParsed.textColor = '#000';
+	}
+	if (style.backgroundColor == undefined){
+		styleParsed.backgroundColor = '#0f0';
+	}
+	if (style.borderColor == undefined){
+		styleParsed.borderColor = '#f00';
+	}
+	if (style.textXoff == undefined){
+		styleParsed.textXoff = 1;
+	}
+	if (style.textYoff == undefined){
+		styleParsed.textYoff = h/2;
+	}
+	
+	let obj = {label:label, x:x, y:y, w:w, h:h, event:event, style:styleParsed}
 	obj.draw = function(){
 		push();
 		fill(this.style.backgroundColor);
