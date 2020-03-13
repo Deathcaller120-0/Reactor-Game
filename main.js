@@ -9,8 +9,9 @@ function setup(){
 	createCanvas(800, 600);
 	frameRate(60);
 	
-	buttons.push(new button('Sell Power', 605, 35, 60, 20, {textXoff:3}));
-	//alert(JSON.stringify(buttons[0]));
+	buttons.push(new button('Sell Power', 605, 35, 60, 20));
+	buttons.push(new button('Wind Turbine', 605, 45, 65, 20));
+	//alert(JSON.stringify(buttons));
 	
 	for (let i = 0; i < buttons.length; i++){
 		buttons[i].style.backgroundColor='#707070';
@@ -168,10 +169,10 @@ function button (label = 'unnamed', x, y, w, h, style, event=undefined) {
 			textColor:'#000', 
 			backgroundColor:'#fff', 
 			borderColor:'#fff', 
-			textXoff:1, 
+			textXoff:3, 
 			textYoff:h/2, 
-			hoverBgColor:'#fff', 
-			hoverBorderColor:'#fff'
+			hoverBgColor:'#707070', 
+			hoverBorderColor:'#f00'
 		};
 	}
 	
@@ -195,7 +196,7 @@ function button (label = 'unnamed', x, y, w, h, style, event=undefined) {
 		styleParsed.borderColor = '#f00';
 	}
 	if (styleParsed.textXoff == undefined){
-		styleParsed.textXoff = 1;
+		styleParsed.textXoff = 3;
 	}
 	if (styleParsed.textYoff == undefined){
 		styleParsed.textYoff = h/2;
