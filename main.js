@@ -10,7 +10,7 @@ function setup(){
 	frameRate(60);
 	
 	buttons.push(new button('Sell Power', 605, 35, 60, 20));
-	buttons.push(new button('Wind Turbine', 605, 55, 65, 20));
+	buttons.push(new button('Wind Turbine', 605, 60, 65, 20));
 	//alert(JSON.stringify(buttons));
 	
 	for (let i = 0; i < buttons.length; i++){
