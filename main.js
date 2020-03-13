@@ -24,8 +24,9 @@ function setup(){
 }
 
 function draw(){
-	image(sprites[1],50,50)
 	background(80);
+	
+	image(sprites[1],50,50);
 	
 	if (tiles.length > 0){	
 		push();
