@@ -167,14 +167,14 @@ function button (label = 'unnamed', x, y, w, h, event=undefined, style) {
 	let obj = {label:label, x:x, y:y, w:w, h:h, event:event, style:style}
 	obj.draw = function(){
 		push();
+		fill(this.style.backgroundColor);
+		stroke(this.style.borderColor);
+		rect(this.x,this.y,this.w,this.h);
+		
 		fill(this.style.textColor);
 		stroke(this.style.textColor);
 		textSize(this.style.textSize);
 		text(this.label, this.x+this.w/2, this.y+this.h/2);
-		
-		fill(this.style.backgroundColor);
-		stroke(this.style.borderColor);
-		rect(this.x,this.y,this.w,this.h);
 		pop();
 	}
 	//alert(JSON.stringify(obj));
