@@ -160,7 +160,7 @@ function buttonPressed(label){
 	return;
 }
 
-function button (label = 'unnamed', x, y, w, h, event=undefined, style) {
+function button (label = 'unnamed', x, y, w, h, style, event=undefined) {
 	if (style == undefined){
 		style = {textSize:10, textColor:'#000', backgroundColor:'#fff', borderColor:'#fff'};
 	}
