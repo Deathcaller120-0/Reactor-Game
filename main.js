@@ -163,7 +163,16 @@ function placeStruct(h,w){
 
 function button (label = 'unnamed', x, y, w, h, style, event=undefined) {
 	if (style == undefined){
-		style = {textSize:10, textColor:'#000', backgroundColor:'#fff', borderColor:'#fff', textXoff:1, textYoff:h/2};
+		style = {
+			textSize:10, 
+			textColor:'#000', 
+			backgroundColor:'#fff', 
+			borderColor:'#fff', 
+			textXoff:1, 
+			textYoff:h/2, 
+			hoverBgColor:'#fff', 
+			hoverBorderColor:'#fff'
+		};
 	}
 	
 	if (event == undefined){
@@ -190,6 +199,12 @@ function button (label = 'unnamed', x, y, w, h, style, event=undefined) {
 	}
 	if (styleParsed.textYoff == undefined){
 		styleParsed.textYoff = h/2;
+	}
+	if (styleParsed.hoverBgColor == undefined){
+		styleParsed.hoverBgColor = '#fff';
+	}
+	if (styleParsed.hoverBorderColor == undefined){
+		styleParsed.hoverBorderColor = '#fff';
 	}
 	
 	let obj = {label:label, x:x, y:y, w:w, h:h, event:event, style:styleParsed}
