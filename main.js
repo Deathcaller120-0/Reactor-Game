@@ -7,7 +7,7 @@ let buttons = [];
 let sprites = [];
 
 function setup(){
-	sprites[1] = loadImage('assets/solarPanel.png');
+	sprites[1] = loadImage('/assets/solarPanel.png');
 	
 	createCanvas(800, 600);
 	frameRate(60);
