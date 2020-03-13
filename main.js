@@ -62,8 +62,8 @@ function draw(){
 		pop();
 	} else {
 		push();
-		textSize(20);
-		text('Map not chosen', 20,20);
+		textSize(30);
+		text('Map not chosen', width/2,height/2);
 		pop();
 	}
 	
