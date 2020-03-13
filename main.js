@@ -168,7 +168,7 @@ function buttonPressed(label){
 
 function button (label = 'unnamed', x, y, w, h, style, event=undefined) {
 	if (style == undefined){
-		style = {textSize:10, textColor:'#000', backgroundColor:'#fff', borderColor:'#fff'};
+		style = {textSize:10, textColor:'#000', backgroundColor:'#fff', borderColor:'#fff', textXoff:1, textYoff:h/2};
 	}
 	
 	let obj = {label:label, x:x, y:y, w:w, h:h, event:event, style:style}
@@ -181,7 +181,7 @@ function button (label = 'unnamed', x, y, w, h, style, event=undefined) {
 		fill(this.style.textColor);
 		stroke(this.style.textColor);
 		textSize(this.style.textSize);
-		text(this.label, this.x, this.y+this.h/2);
+		text(this.label, this.x+this.style.textXoff, this.y+this.style.textYoff);
 		pop();
 	}
 	//alert(JSON.stringify(obj));
