@@ -57,9 +57,10 @@ function draw(){
 				}
 				square(tiles[h][w].x, tiles[h][w].y, 20);
 				
-				if (tiles[h][w].placed.id !== 'none' && tiles[h][w].placed.id !== 'research'){
+				if (tiles[h][w].placed.id !== 'none'){
 					tiles[h][w].placed.dur--;
 					main.power+=tiles[h][w].powGen;
+					image(sprites[tiles[h][w].placed.num], tiles[h][w].x, tiles[h][w].y);
 				}
 			}
 		}
