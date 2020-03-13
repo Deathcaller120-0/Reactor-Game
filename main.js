@@ -174,7 +174,7 @@ function button (label = 'unnamed', x, y, w, h, event=undefined, style) {
 		fill(this.style.textColor);
 		stroke(this.style.textColor);
 		textSize(this.style.textSize);
-		text(this.label, this.x+this.w/4, this.y+this.h/2);
+		text(this.label, this.x+this.w/5, this.y+this.h/2);
 		pop();
 	}
 	//alert(JSON.stringify(obj));
