@@ -161,9 +161,15 @@ function placeStruct(h,w){
 	}
 }
 
-function button (label = 'unnamed', x, y, w, h, style, event=function{}) {
+function button (label = 'unnamed', x, y, w, h, style, event=undefined) {
 	if (style == undefined){
 		style = {textSize:10, textColor:'#000', backgroundColor:'#fff', borderColor:'#fff', textXoff:1, textYoff:h/2};
+	}
+	
+	if (event == undefined){
+		event = function(){
+			alert(date.now());
+		}
 	}
 	
 	let obj = {label:label, x:x, y:y, w:w, h:h, event:event, style:style}
