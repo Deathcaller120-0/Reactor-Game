@@ -104,9 +104,6 @@ function draw(){
 	// On Screen Buttons
 	for (let i = 0; i < buttons.length; i++){
 		buttons[i].draw();
-		//if (buttons[i].isPressed){
-		//	buttonPressed(button.label);
-		//}
 	}
 }
 
@@ -161,10 +158,19 @@ function buttonPressed(label){
 	return;
 }
 
-function button (label = 'unnamed', x=1, y=1, w=20, h=10, event=undefined) {
-	let obj = {label:label, x:x, y:y, w:w, h:h, event:event}
+function button (label = 'unnamed', x, y, w, h, event=undefined, style) {
+	if (style == undefined){
+		style = {textSize:10, textColor:'#fff', backgroundColor:'#fff', borderColor:'#fff'};
+	}
+	
+	let obj = {label:label, x:x, y:y, w:w, h:h, event:event, style:style}
 	obj.draw = function(){
-		text(this.label, this.x-this.w/2, this.y-this.h/2)
+		fill(this.style.textColor);
+		textSize(this.style.textSize);
+		text(this.label, this.x+this.w/2, this.y+this.h/2);
+		
+		fill(this.style.backgroundColor);
+		stroke(this.style.borderColor);
 		rect(this.x,this.y,this.w,this.h);
 	}
 	alert(JSON.stringify(obj));
