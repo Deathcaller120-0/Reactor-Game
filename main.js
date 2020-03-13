@@ -4,13 +4,17 @@ let main = {selected:'none', money:10, battery:100, power:0};
 
 //let gui;
 let buttons = [];
+let sprites = [];
 
 function setup(){
+	sprites[1] = loadImage('assets/solarPanel.png');
+	
 	createCanvas(800, 600);
 	frameRate(60);
 	
 	buttons.push(new button('Sell Power', 605, 35, 60, 20));
 	buttons.push(new button('Wind Turbine', 605, 60, 65, 20));
+	buttons.push(new button('Solar Panel', 605, 60, 65, 20));
 	//alert(JSON.stringify(buttons));
 	
 	for (let i = 0; i < buttons.length; i++){
@@ -20,6 +24,7 @@ function setup(){
 }
 
 function draw(){
+	image(sprites[1],50,50)
 	background(80);
 	
 	if (tiles.length > 0){	
